@@ -1,16 +1,19 @@
-{ lib, pkgs, ... }:
 {
+  lib,
+  pkgs,
+  ...
+}: {
   config = {
     nixpkgs.hostPlatform = "x86_64-linux";
     system-manager.allowAnyDistro = true;
     nix = {
-    enable = true;
-    settings = {
-	experimental-features = [ "nix-command" "flakes"];
-	max-jobs = "auto";
-    	auto-optimise-store = true;
-	trusted-users = ["@wheel"];
-    };
+      enable = true;
+      settings = {
+        experimental-features = ["nix-command" "flakes"];
+        max-jobs = "auto";
+        auto-optimise-store = true;
+        trusted-users = ["@wheel"];
+      };
     };
 
     # Enable and configure services
@@ -22,7 +25,7 @@
       # Packages that should be installed on a system
       systemPackages = with pkgs; [
         # hello
-	system-manager
+        system-manager
       ];
 
       # Add directories and files to `/etc` and set their permissions
@@ -48,7 +51,7 @@
     };
 
     # Enable and configure systemd services
-    systemd.services = { };
+    systemd.services = {};
 
     # Configure systemd tmpfile settings
     systemd.tmpfiles = {
