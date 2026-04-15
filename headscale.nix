@@ -1,4 +1,5 @@
-{
+{nixosModulesPath, ...}: {
+  imports = [(nixosModulesPath + "/services/networking/headscale.nix")];
   services.headscale = let
     domain = "partlyaweso.me";
     ts_domain = "on.${domain}";
