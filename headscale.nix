@@ -3,7 +3,7 @@
   services.headscale = let
     domain = "partlyaweso.me";
     ts_domain = "on.${domain}";
-    hs_domain = "https://hs.${ts_domain}";
+    hs_domain = "https://head.to.${domain}";
   in {
     enable = true;
     address = "0.0.0.0";
