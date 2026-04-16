@@ -13,8 +13,8 @@
       server_url = hs_domain;
 
       dns = {
-        base_domain = domain;
-        search_domains = [ts_domain];
+        base_domain = ts_domain;
+        # search_domains = [ts_domain];
         nameservers.global = [
           # cloudflare ipv4
           "1.1.1.1"
