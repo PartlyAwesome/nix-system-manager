@@ -3,14 +3,14 @@
   services.headscale = let
     domain = "partlyaweso.me";
     ts_domain = "on.${domain}";
-    https_ts_domain = "https://${ts_domain}";
+    hs_domain = "https://hs.${ts_domain}";
   in {
     enable = true;
     address = "0.0.0.0";
     port = 64328;
 
     settings = {
-      server_url = https_ts_domain;
+      server_url = hs_domain;
 
       dns = {
         base_domain = domain;
