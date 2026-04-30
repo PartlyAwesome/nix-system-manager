@@ -14,6 +14,7 @@
 
       dns = {
         base_domain = ts_domain;
+        magic_dns = false;
         # search_domains = [ts_domain];
         nameservers.global = [
           # cloudflare ipv4
