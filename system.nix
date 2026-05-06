@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./headscale.nix];
+  imports = [
+    ./headscale.nix
+    ./caddy.nix
+  ];
   config = {
     nixpkgs.hostPlatform = "x86_64-linux";
     system-manager.allowAnyDistro = true;
